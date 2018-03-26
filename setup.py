@@ -16,6 +16,6 @@ setup(
         "poster >= 0.8.1"
     ],
     dependency_links=[
-        "git+ssh://git@github.com/tirkarthi/python-poster.git@f2ba2ca8013ba5d1c5be2a59926b85f33e82b417#egg=poster-0.8.2"
+        "git+ssh://git@github.com/tirkarthi/python-poster.git@f1bcbc1fe3ffd2d15726d111c9f55fdfc9e33ade#egg=poster-0.8.2"
     ]
 )
