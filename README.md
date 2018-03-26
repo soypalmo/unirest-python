@@ -1,5 +1,7 @@
 # Unirest for Python [![Build Status][travis-image]][travis-url] [![version][pypi-version]][pypi-url]
 
+## This exists a friendly fork for Python 3 compatibility. I don't maintain it actively but I am open for PRs or welcome you to fork it to apply your changes. Use it at your own risk. 
+
 [![License][pypi-license]][license-url]
 [![Downloads][pypi-downloads]][pypi-url]
 [![Dependencies][versioneye-image]][versioneye-url]
