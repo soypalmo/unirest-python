@@ -97,10 +97,10 @@ def __request(method, url, params={}, headers={}, auth=None, callback=None):
         try:
             response = urllib2.urlopen(req, timeout=_timeout)
             _unirestResponse = UnirestResponse(response.code, response.headers, response.read())
-        except urllib2.HTTPError, e:
+        except urllib2.HTTPError as e:
             response = e
             _unirestResponse = UnirestResponse(response.code, response.headers, response.read())
-        except urllib2.URLError, e:
+        except urllib2.URLError as e:
             _unirestResponse = UnirestResponse(0, {}, str(e.reason))
 
     if callback is None or callback == {}:

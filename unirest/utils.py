@@ -1,3 +1,4 @@
+from __future__ import print_function
 from poster.encode import multipart_encode
 import urllib
 
