@@ -179,6 +179,7 @@ def timeout(seconds):
 
 
 def __dorequest(method, url, params, headers, auth, callback=None):
+    print(headers)
     if callback is None:
         return __request(method, url, params, headers, auth)
     else:
