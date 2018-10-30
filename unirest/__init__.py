@@ -90,6 +90,7 @@ def __request(method, url, params={}, headers={}, auth=None, callback=None):
 
     del headers['content-type']
     print(headers)
+    print(_httplib)
     _unirestResponse = None
     if _httplib == "urlfetch":
         res = urlfetch.fetch(url, payload=data, headers=headers, method=method, deadline=_timeout)
