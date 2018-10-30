@@ -48,7 +48,8 @@ _timeout = 10
 
 _httplib = None
 try:
-    from google.appengine.api import urlfetch
+    #from google.appengine.api import urlfetch
+    import urlfetch
     _httplib = 'urlfetch'
 except ImportError:
     pass
