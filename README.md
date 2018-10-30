@@ -1,6 +1,6 @@
 # Unirest for Python [![Build Status][travis-image]][travis-url] [![version][pypi-version]][pypi-url]
 
-## This exists a friendly fork for Python 3 compatibility. I don't maintain it actively but I am open for PRs or welcome you to fork it to apply your changes. Use it at your own risk. 
+## This exists as a friendly fork for Python 3 compatibility. I don't maintain it actively but I am open for PRs or welcome you to fork it to apply your changes. Use it at your own risk.
 
 [![License][pypi-license]][license-url]
 [![Downloads][pypi-downloads]][pypi-url]
@@ -10,7 +10,7 @@
 ![][unirest-logo]
 
 
-[Unirest](http://unirest.io) is a set of lightweight HTTP libraries available in multiple languages, built and maintained by [Mashape](https://github.com/Mashape), who also maintain the open-source API Gateway [Kong](https://github.com/Mashape/kong). 
+[Unirest](http://unirest.io) is a set of lightweight HTTP libraries available in multiple languages, built and maintained by [Mashape](https://github.com/Mashape), who also maintain the open-source API Gateway [Kong](https://github.com/Mashape/kong).
 
 
 ## Features
@@ -60,7 +60,7 @@ def callback_function(response):
   response.headers # The HTTP headers
   response.body # The parsed response
   response.raw_body # The unparsed response
-  
+
 thread = unirest.post("http://httpbin.org/post", headers={ "Accept": "application/json" }, params={ "parameter": 23, "foo": "bar" }, callback=callback_function)
 ```
 
@@ -99,14 +99,14 @@ Authenticating the request with basic authentication can be done by providing an
 ```python
 response = unirest.get("http://httpbin.org/get", auth=('username', 'password'))
 ```
-    
+
 # Request
 
 ```python
 unirest.get(url, headers = {}, params = {}, auth = (), callback = None)
 unirest.post(url, headers = {}, params = {}, auth = (), callback = None)
 unirest.put(url, headers = {}, params = {}, auth = (), callback = None)
-unirest.patch(url, headers = {}, params = {}, auth = (), callback = None)    
+unirest.patch(url, headers = {}, params = {}, auth = (), callback = None)
 unirest.delete(url, headers = {}, params = {}, auth = (), callback = None)
 ```
 
@@ -177,4 +177,3 @@ Made with &#9829; from the [Mashape](https://www.mashape.com/) team
 
 [versioneye-url]: https://www.versioneye.com/user/projects/54b82a8905064657eb00024e
 [versioneye-image]: https://img.shields.io/versioneye/d/user/projects/54b82a8905064657eb00024e.svg?style=flat
-
