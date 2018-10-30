@@ -70,10 +70,11 @@ def __request(method, url, params={}, headers={}, auth=None, callback=None):
         url += "?" + url_parts[1]
 
     # Lowercase header keys
+    headers2 = dict(headers.items())
+    print(headers2)
     headers = dict((k.lower(), v) for k, v in headers.items())
     headers["user-agent"] = USER_AGENT
 
-    print(headers)
     data, post_headers = utils.urlencode(params)
     if post_headers is not None:
         headers = dict(list(headers.items()) + list(post_headers.items()))
@@ -88,7 +89,6 @@ def __request(method, url, params={}, headers={}, auth=None, callback=None):
             headers['Authorization'] = "Basic " + encoded_string.decode('utf-8')
 
     headers = dict(list(headers.items()) + list(_defaultheaders.items()))
-    print(headers)
 
     _unirestResponse = None
     if _httplib == "urlfetch":
