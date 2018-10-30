@@ -88,6 +88,7 @@ def __request(method, url, params={}, headers={}, auth=None, callback=None):
 
     headers = dict(list(headers.items()) + list(_defaultheaders.items()))
 
+    print(headers)
     _unirestResponse = None
     if _httplib == "urlfetch":
         res = urlfetch.fetch(url, payload=data, headers=headers, method=method, deadline=_timeout)
@@ -179,7 +180,6 @@ def timeout(seconds):
 
 def __dorequest(method, url, params, headers, auth, callback=None):
     if callback is None:
-        print(headers)
         return __request(method, url, params, headers, auth)
     else:
         thread = threading.Thread(target=__request,
