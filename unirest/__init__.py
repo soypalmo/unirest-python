@@ -74,7 +74,6 @@ def __request(method, url, params={}, headers={}, auth=None, callback=None):
     headers["user-agent"] = USER_AGENT
 
     data, post_headers = utils.urlencode(params)
-    print(post_headers)
     if post_headers is not None:
         headers = dict(list(headers.items()) + list(post_headers.items()))
 
@@ -87,6 +86,8 @@ def __request(method, url, params={}, headers={}, auth=None, callback=None):
             encoded_string = base64.b64encode((user + ':' + password).encode('utf-8'))
             headers['Authorization'] = "Basic " + encoded_string.decode('utf-8')
 
+    headers2 = dict(list(_defaultheaders.items()))
+    print(headers2)
     headers = dict(list(headers.items()) + list(_defaultheaders.items()))
 
     _unirestResponse = None
