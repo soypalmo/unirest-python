@@ -88,6 +88,7 @@ def __request(method, url, params={}, headers={}, auth=None, callback=None):
 
     headers = dict(list(headers.items()) + list(_defaultheaders.items()))
 
+    del headers['content-type']
     print(headers)
     _unirestResponse = None
     if _httplib == "urlfetch":
