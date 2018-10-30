@@ -73,6 +73,7 @@ def __request(method, url, params={}, headers={}, auth=None, callback=None):
     headers = dict((k.lower(), v) for k, v in headers.items())
     headers["user-agent"] = USER_AGENT
 
+    print(headers)
     data, post_headers = utils.urlencode(params)
     if post_headers is not None:
         headers = dict(list(headers.items()) + list(post_headers.items()))
