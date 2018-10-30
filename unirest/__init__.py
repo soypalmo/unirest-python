@@ -74,6 +74,7 @@ def __request(method, url, params={}, headers={}, auth=None, callback=None):
     headers["user-agent"] = USER_AGENT
 
     data, post_headers = utils.urlencode(params)
+    print(post_headers)
     if post_headers is not None:
         headers = dict(list(headers.items()) + list(post_headers.items()))
 
@@ -88,7 +89,6 @@ def __request(method, url, params={}, headers={}, auth=None, callback=None):
 
     headers = dict(list(headers.items()) + list(_defaultheaders.items()))
 
-    print(headers)
     _unirestResponse = None
     if _httplib == "urlfetch":
         res = urlfetch.fetch(url, payload=data, headers=headers, method=method, deadline=_timeout)
