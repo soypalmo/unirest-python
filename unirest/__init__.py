@@ -87,8 +87,8 @@ def __request(method, url, params={}, headers={}, auth=None, callback=None):
             headers['Authorization'] = "Basic " + encoded_string.decode('utf-8')
 
     headers = dict(list(headers.items()) + list(_defaultheaders.items()))
+    print(headers)
 
-	print(headers)
     _unirestResponse = None
     if _httplib == "urlfetch":
         res = urlfetch.fetch(url, payload=data, headers=headers, method=method, deadline=_timeout)
