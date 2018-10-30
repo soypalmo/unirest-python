@@ -148,6 +148,7 @@ def get(url, **kwargs):
 
 
 def post(url, **kwargs):
+	print("post")
     return __dorequest("POST", url, get_parameters(kwargs), kwargs.get(HEADERS_KEY, {}), kwargs.get(AUTH_KEY, None), kwargs.get(CALLBACK_KEY, None))
 
 
