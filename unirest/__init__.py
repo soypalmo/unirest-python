@@ -86,10 +86,9 @@ def __request(method, url, params={}, headers={}, auth=None, callback=None):
             encoded_string = base64.b64encode((user + ':' + password).encode('utf-8'))
             headers['Authorization'] = "Basic " + encoded_string.decode('utf-8')
 
-    headers2 = dict(list(_defaultheaders.items()))
-    print(headers2)
     headers = dict(list(headers.items()) + list(_defaultheaders.items()))
 
+	print(headers)
     _unirestResponse = None
     if _httplib == "urlfetch":
         res = urlfetch.fetch(url, payload=data, headers=headers, method=method, deadline=_timeout)
